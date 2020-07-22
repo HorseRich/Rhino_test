@@ -11,7 +11,7 @@
 >AR Camera：Connect AR device camera. TrackingProfile must be added to it.   
 ![](https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/ballBasicScenes_config_2.png)   
 >Ground Plane：It is used to unify the coordinates of the virtual and real world.There can be multiple Ground Planes in a scene.      
->RxPlayerHand： Connect AR device controller.It can emit rays to interact with 3D objects in the scene.The property called Raycast Culling Mask must contain all levels of 3D objects that can be interacted with.In this tutorial, the property is set to UI and 3D Object.   
+>RxPlayerHand： Connect AR device controller.It can emit rays to interact with 3D objects in the scene.The property called Raycast Culling Mask must contain all levels of 3D objects that can be interacted with. In this tutorial, the property is set to UI and 3D Object.   
 ![](https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/ballBasicScenes_config_3.png)    
 >Plane：Add a Box Colider to it and the size of the collider must be the same as its.        
 >RxEventSystem：To handle events produced by RxPlayerHand.      
@@ -28,7 +28,8 @@
 - Add an OutLine component to the ball. It can make the edges of the ball show other colors.      
 - Add a Touchable component to the ball. It allows the ball to be touched by rays.   
 - Add an OutLineOnTouch component to the ball. When rays touch the ball, this component will trigger the outLine component effect.   
-    
+   
+	Effect picture： 
 <img src="https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/outline.gif" height="400px" width="450px" align=middle/>     
 
 ### 4 Achieving grabbing effect
@@ -37,6 +38,7 @@
 
 - Add a Grabable component to the ball. After the ball is touched, users can press the controller button to grab the ball through this component.    
 
+	Effect picture： 
 <img src="https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/grabable.gif" height="400px" width="450px" div align=center  />     
 
 ### 5 Achieving throwing effect
@@ -45,6 +47,7 @@
 
 - Add a Throwable component to the ball. After the ball is grabbed, users can press the controller button to throw the ball through this component.    
  
+	Effect picture： 
 <img src="https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/throwable.gif" height="400px" width="450px"/>     
 
 ### 6 Resetting
@@ -84,10 +87,13 @@
 
 
  
+	Effect picture： 
 <img src="https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/reset.gif" height="400px" width="450px"/>     
 
 ## Note
-1. Add the trackingProfile file to AR camera.
-2. The property of RxPlayerHand called Raycast Culling Mask must contain all levels of 3D objects that can be interacted with.
+1. Add the trackingProfile file to AR camera.    
+![](https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/ballBasicScenes_config_2.png) 
+2. The property of RxPlayerHand called Raycast Culling Mask must contain all levels of 3D objects that can be interacted with.    
+![](https://raw.githubusercontent.com/Ximmerse/Rhino-X/gh-pages/en/images/ballBasicScenes_config_3.png)
 3. Both 3D objects and UI need to add a collider. Rxplayerhand interacts with 3D objects through the collider.
 4. The collider of UI and 3D objects should be consistent with their own size。
